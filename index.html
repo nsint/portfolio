@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N$nt | Portfolio</title>
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/856735831757946900/857456795878031400/276006b99348b5ccdf233e9dcb2710a3.gif" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="#">N$nt</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <center>
+          <h1>N$NT PORTFOLIO.</h1>
+          <hr width=300>
+          <br>
+          <p>Bienvenido a mi portafolio</p>
+          <br>
+          <h5>Contactame:</h5>
+          <hr width=100>
+          <ul class="contacto-link">
+              <li class="contacto-link">
+                <a href="https://github.com/nsint"><i class="fab fa-github-square" style="font-size: 50px;"></i></a>
+              </li>
+              <li class="contacto-link">
+                <a href="https://discord.gg/devhouse"><i style="font-size: 47px;" class="fab fa-discord"></i></a>
+              </li>
+          </ul>
+      </center>
+  </div>
+  <div id="about">
+      <br>
+      
+      <br>
+    <div class="about">
+        <div class="content">
+          <div class="title">Fullstack Developer</div>
+          <p>Hola, mi nombre es Samuel Garcia soy un desarrollador web Full-Stack.</p>
+          <p>Las herramientas que manejo para el desarrollo web son: Nodejs, React, Next, Vue y otras mas. Tambien soy backend developer, y las herramientas que manejo son: express, nest, mongodb, sql, etc.</p>
+          <br>
+          <hr>
+          <p>¿Cual es mi experiencia?</p>
+          <br>
+          <li>He programado durante al menos un año, he aprendido el uso de tecnologias nuevas</li>
+          <li>Siempre busco nuevas formas de aprender programacion, y nunca me detengo!</li>
+        </div>
+      </div>
+  </div>
+  <br>
+  <hr>
+
+
+  <div id="skills">
+    <br>
+    <br>
+  <div class="about">
+      <div class="content">
+        <div class="title">Mis Habilidades</div>
+        <br/>
+        <div class="carta">
+            <div class="habilidades">
+                <li><h3>JavaScript</h3>
+                    <span class="bar"><span class="js"></span></span>
+                </li>
+                <li><h3>HTML</h3>
+                    <span class="bar"><span class="html"></span></span>
+                </li>
+                <li><h3>CSS</h3>
+                    <span class="bar"><span class="css"></span></span>
+               </li>
+               <li><h3>React</h3>
+                <span class="bar"><span class="react"></span></span>
+                </li>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+  <center>
+    <div id="subir">
+        <i class="fas fa-angle-up"></i>
+    </div>
+  </center>
+  <script>
+      let caja=document.getElementById("subir");
+        caja.addEventListener("click",function(){
+            document.documentElement.scrollTop=0;
+        })
+
+        window.addEventListener("scroll",function(){
+            if (document.documentElement.scrollTop > 0) {
+                caja.style.display="flex"
+            } else {
+                caja.style.display="none"
+            }
+})
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+</body>
+</html>

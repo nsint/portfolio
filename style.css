@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #000;
+    color: #fff;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #302f2f;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(36, 35, 35);
+}
+#about {
+    height: 100vh;
+}
+#skills{
+    height: 100vh;
+}
+::selection{
+  background: rgb(0,123,255,0.3);
+}
+.content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+  color: #fff;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+  background: #0a0a0a;
+  padding: 10px 0;
+  box-shadow: 0px 3p    x 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar .menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+}
+.menu-list li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+  
+.menu-list li a:hover{
+  color: #555555;
+}
+.banner{
+  background: url("https://media.istockphoto.com/photos/dark-blue-metal-pattern-background-picture-id1161683700?k=6&m=1161683700&s=612x612&w=0&h=Cg1AiHKYi7Epp-U_oGW07GIq7LRvNr7udV-bATHiUSg=") no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.about{
+  padding: 30px 0;
+}
+.about .title{
+  font-size: 38px;
+  color: #fff;
+  font-weight: 700;
+}
+.about p{
+  padding-top: 20px;
+  text-align: justify;
+}
+.icon{
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  display: none;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 20px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 10px;
+  }
+}
+@media (max-width: 868px) {
+  body.disabled{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #222;
+    transition: all 0.3s ease;
+  }
+  .navbar.show .menu-list{
+    left: 0%;
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a{
+    margin-left: 0px;
+  }
+}
+
+#subir {
+    display: flex;
+    bottom: 4rem;
+    right: 4rem;
+    width: 3.3rem;
+    height: 3.3rem;
+    background: #272626;
+    border-radius: 50%;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+}
+
+
+#subir i {
+    position: absolute;
+    font-size: 1.7rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    color: rgb(250, 218, 177);
+    transition: .2s;
+    animation: arrow .6s linear infinite;
+}
+
+.show{
+    z-index: 10;
+}
+
+.show #subir{
+    animation: popup .3s ease-in-out;
+    width: 6.6rem;
+    height: 6.6rem;
+}
+
+.show i {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes arrow {
+    0% {
+        top: 20%;
+    }
+    50%{
+        top: 30%;
+    }
+    75%{
+        top: 36%;
+    }
+
+    100%{
+        top: 35%;
+    }
+}
+@media (max-width: 380px) {
+    .navbar .logo a{
+      font-size: 27px;
+    }
+    #subir {
+      display: flex;
+      bottom: 4rem;
+      right: 1rem;
+      width: 2.3rem;
+      height: 2.3rem;
+      background: #272626;
+      border-radius: 50%;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      position: fixed;
+  }
+  #home {
+      height: 100vh;
+  }
+  #skills{
+      height: 70vh;
+  }
+  .carta{
+    width: 300px;
+    background: #242323;
+    margin: 60px auto;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    text-transform: uppercase;
+  }
+  }
+@media screen and (max-width: 520px) {
+    .carta{
+        width: 200px;
+        background: #242323;
+        margin: 30px auto;
+        color: #fff;
+        padding: 10px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        text-transform: uppercase;
+      }
+      .carta .habilidades li{
+        margin: 20px 0;
+        padding: 5px;
+        list-style: none;
+    }
+}
+.carta{
+    width: 300px;
+    background: #242323;
+    margin: 60px auto;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    text-transform: uppercase;
+}
+
+.carta .habilidades h3{
+    margin: 5px;
+}
+
+.carta .habilidades li{
+    margin: 20px 0;
+    padding: 10px;
+    list-style: none;
+}
+
+.bar{
+    background: #111111;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.bar:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12), 0 10px 10px rgba(0, 0, 0, 0.24);
+}
+
+.bar span{
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgb(166, 241, 115)0%, rgb(61, 228, 28)100%);
+}
+
+.js{
+    width: 100%;
+    animation: js 3s;
+}
+
+.html{
+    width: 96%;
+    animation: html 3s;
+}
+.react{
+    width: 76%;
+    animation: react 3s;
+}
+.css{
+    width: 98%;
+    animation: css 3s;
+}
+
+@keyframes js{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 96%;
+    }
+}
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 98%;
+    }
+}
+@keyframes react{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 76%;
+    }
+}
+
+.contacto-link{
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    margin: 1rem;
+}
+
+.contacto-link a{
+    color: #fff;
+}
+
+.contacto-link a:hover{
+    color: rgb(114, 113, 113);
+}
